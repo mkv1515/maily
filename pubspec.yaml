@@ -1,5 +1,5 @@
 name: maily
-description: Maily aims to become a fully featured email app once it has grown up.
+description: Dss Mail app.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
@@ -33,6 +33,17 @@ dependencies:
   hooks_riverpod: ^2.4.4
   riverpod_annotation: ^2.1.5
 
+  flutter_launcher_icons: ^0.13.1
+
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/dss_mail.png"
+  adaptive_icon_foreground: "assets/images/dss_mail.png"
+  adaptive_icon_background: "#ffffff"
+  remove_alpha_ios: true
+
 dependency_overrides:
   analyzer: ^6.4.1 # for dart code metrics
   meta: ^1.12.0 # for analyzer
@@ -51,9 +62,9 @@ dependency_overrides:
   enough_mail:
     git:
       url: https://github.com/Enough-Software/enough_mail.git
-  enough_mail_app:
-    git:
-      url: https://github.com/Enough-Software/enough_mail_app.git
+  # enough_mail_app:
+  #   git:
+  #     url: https://github.com/mkv1515/enough_mail_app.git
   enough_mail_flutter:
     git:
       url: https://github.com/Enough-Software/enough_mail_flutter.git
@@ -87,11 +98,12 @@ dependency_overrides:
   enough_platform_widgets:
     git:
       url: https://github.com/Enough-Software/enough_platform_widgets.git
+
   # out-comment the following to enable local development:
   # enough_mail:
   #   path: ../enough_mail
-  # enough_mail_app:
-  #   path: ../enough_mail_app
+  enough_mail_app:
+    path: ../enough_mail_app
   # enough_mail_flutter:
   #   path: ../enough_mail_flutter
   # enough_mail_html:
@@ -116,7 +128,7 @@ dependency_overrides:
   #   path: ../enough_ascii_art
   # enough_platform_widgets:
   #   path: ../enough_platform_widgets
-  
+
 dev_dependencies:
   analyzer: ^6.4.1
   build_runner: ^2.4.6
@@ -146,7 +158,7 @@ flutter:
 
   assets:
     - assets/images/
-   
+
     # - assets/images/
     # - assets/images/providers/
   # An image asset can refer to one or more resolution-specific "variants", see
